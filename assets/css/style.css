@@ -19,6 +19,7 @@ body {
 }
 header {
     padding: 6px;
+    display: flex;
 }
 .fe {
     justify-content: flex-end;
@@ -38,15 +39,44 @@ header {
     font-size: 13px;
 }
 .tmenu {
-    line-height: 24px;
     padding-right: 15px;
 }
-.ip, .ii {
-    display: flex;
+.tmenu a {
+    display: block;
+    border-bottom: 1px solid transparent;
+}
+.tmenu a:hover {
+    border-bottom: 1px solid #FFF;
+}
+.imenu a {
+    display: flex; 
+    align-items:center;
     justify-content: center;
-    align-items:center ;
-    width: 48px;
-    height: 48px;
+    height: 40px;
+    width: 40px;
+}
+.ip, .ii {
+
+    width: 40px;
+    height: 40px;
+    padding: 4px;
+}
+.ip a {
+    color: rgba(255,255,255,.87);
+    box-sizing: border-box;
+    padding: 8px;
+    cursor: pointer;
+
+}
+.ipi {
+    height: 24px;
+    width: 24px;
+    fill: currentColor;
+
+}
+.imenu a:hover{
+    background-color: rgba(232,234,237,.08);
+    border-radius: 100%;
 }
 .icon {
     height: 32px;
@@ -57,10 +87,12 @@ header {
 }
 
 
-
-
-
 /*Section*/
+
+
+section {
+    display: flex;
+}
 .dglogo {
     display: flex;
     justify-content: center;
@@ -79,10 +111,68 @@ header {
     padding: 26px 20px 20px 20px;
 }
 .mbar {
+    color: rgb(189, 193, 198);
     width: 582px;
     height: 46px;
     border: 1px solid #5f6368;
     border-radius: 24px;
+}
+.mbar:hover {
+    background-color: #303134;
+    border: 1px solid #303134;;
+    box-shadow: 0 1px 6px 0 #171717;
+}
+.mbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.txa {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    margin-top: 3px;
+}
+#txad {
+    display: flex;
+    justify-content: center;
+    resize: none;
+    font-size: 16px;
+    background-color:transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    color: #FFF;
+    word-wrap: break-word;
+    outline: none;
+    display: flex;
+    line-height: 22px;
+    overflow-x: hidden;
+    flex: 100%;
+    height: 27px;
+}
+#txad:invalid {
+    background-color: transparent;
+}
+.tecd {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 0 8px 2px;
+    width: 24px;
+    line-height: 44px;
+}
+.tecs {
+    background: url(//www.gstatic.com/inputtools/images/tia.png) no-repeat center;
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+.tec {
+    visibility: hidden;
 }
 .dbar input {
     background-color: #303134;
@@ -90,7 +180,7 @@ header {
     border-radius: 4px;
     color: #e8eaed;
     font-size: 14px;
-    padding: 0px 16px;
+    padding: 0 16px;
     margin: 11px 4px;
     height: 36px;
     line-height: 27px;
@@ -101,10 +191,98 @@ header {
 .dbar {
     padding-top: 18px;
 }
+.dbar input:hover {
+    box-shadow: 0 1px 3px rgba(23,23,23,0.24);
+    background-color: #303134;
+    border: 1px solid #5f6368;
+    color: #e8eaed;
+}
+.cai {
+    height: 24px;
+    width: 24px;
+    vertical-align: middle;
+}
+.caid {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 0;
+    background: transparent;
+    outline: none;
+    padding: 0 16px 0 8px;
+    width: 24px;
+    line-height: 44px;
+    margin-bottom: 2px;
+}
+.luid {
+    display: flex;
+    align-items: center;
+    padding-right: 11px;
+    margin-top: -5px;
+    height: 46px;
+    margin: auto;
+    padding-left: 12px;
+    color: #9aa0a6;
+}
+.luis {
+    height: 20px;
+    line-height: 20px;
+    display: inline-block;
+    fill: currentColor;
+    position: relative;
+    width: 24px
+}
+.luis svg {
+    display: block;
+    height: 100%;
+    width: 100%;
 
+}
 
 
 
 
 
 /*Footer*/
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+.foot {
+    background: #171717;
+}
+.foc {
+    padding: 15px 30px;
+    border-bottom: 1px solid #3c4043;
+    font-size: 15px;
+    color: #9aa0a6;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.foa {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 20px;
+    flex-wrap: wrap;
+}
+.foa a {
+    display:block;
+    padding: 15px;
+    white-space: nowrap;
+    color: #9aa0a6;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+}
+.foa1, .foa2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media only screen and (max-width: 1200px){
+.foa {
+    justify-content: space-evenly;
+    }
+}
