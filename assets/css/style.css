@@ -18,7 +18,7 @@ body {
     justify-content: center;
 }
 header {
-    padding: 6px;
+    padding: 6px 10px;
     display: flex;
 }
 .fe {
@@ -29,37 +29,36 @@ header {
     display: flex;
     align-items: center;
 }
-.hmenu {
-    width: 229px;
-    height: 48px;
-}
 .tmenu a, .imenu a {
     color: #FFF;
     text-decoration: none;
-    font-size: 13px;
+    font-size: clamp(9px, 2.5vw, 13px);
 }
 .tmenu {
-    padding-right: 15px;
+    padding-right: clamp(0px, 1.2vw, 15px);
+
 }
 .tmenu a {
     display: block;
-    border-bottom: 1px solid transparent;
+    line-height: 24px;
 }
 .tmenu a:hover {
-    border-bottom: 1px solid #FFF;
+    text-decoration: underline;
+    
 }
 .imenu a {
     display: flex; 
     align-items:center;
     justify-content: center;
-    height: 40px;
-    width: 40px;
+    height: clamp(34px, 8vw, 40px);
+    width: clamp(34px, 8vw, 40px);
 }
+
 .ip, .ii {
 
-    width: 40px;
-    height: 40px;
-    padding: 4px;
+    height: clamp(34px, 8vw, 40px);
+    width: clamp(34px, 8vw, 40px);
+    padding: clamp(0px, .3vw, 4px);
 }
 .ip a {
     color: rgba(255,255,255,.87);
@@ -79,7 +78,7 @@ header {
     border-radius: 100%;
 }
 .icon {
-    height: 32px;
+    height: clamp(26px, 6vw, 32px);
     width: auto;
 }
 .ti, .tg{
@@ -100,7 +99,7 @@ section {
     height: 108px;
 }
 .glogo {
-    width: 272;
+    width: clamp(180px, 50vw, 272px);;
     height: auto;
 }
 .cbox {
@@ -111,9 +110,12 @@ section {
     padding: 26px 20px 20px 20px;
 }
 .mbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
     color: rgb(189, 193, 198);
-    width: 582px;
-    height: 46px;
+    width: clamp(290px, 80vw, 582px);
+    height: clamp(34px, 8vw, 46px);
     border: 1px solid #5f6368;
     border-radius: 24px;
 }
@@ -121,11 +123,6 @@ section {
     background-color: #303134;
     border: 1px solid #303134;;
     box-shadow: 0 1px 6px 0 #171717;
-}
-.mbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
 }
 .txa {
     display: flex;
@@ -137,12 +134,12 @@ section {
     display: flex;
     justify-content: center;
     resize: none;
-    font-size: 16px;
+    font-size: clamp(11px, 2.5vw, 16px);
     background-color:transparent;
     border: none;
     margin: 0;
     padding: 0;
-    color: #FFF;
+    color: #e8eaed;
     word-wrap: break-word;
     outline: none;
     display: flex;
@@ -167,8 +164,6 @@ section {
 }
 .tecs {
     background: url(//www.gstatic.com/inputtools/images/tia.png) no-repeat center;
-    height: 24px;
-    width: 24px;
     vertical-align: middle;
 }
 .tec {
@@ -179,10 +174,11 @@ section {
     border: 1px solid #303134;
     border-radius: 4px;
     color: #e8eaed;
-    font-size: 14px;
+    font-size: clamp(10px, 2.5vw, 14px);
     padding: 0 16px;
-    margin: 11px 4px;
-    height: 36px;
+    margin: 11px 6px;
+    height: clamp(28px, 6vw, 36px);
+    min-width: 54px;
     line-height: 27px;
     text-align: center;
     cursor: pointer;
@@ -190,6 +186,9 @@ section {
 }
 .dbar {
     padding-top: 18px;
+    display: flex;
+    flex-direction: row;
+
 }
 .dbar input:hover {
     box-shadow: 0 1px 3px rgba(23,23,23,0.24);
@@ -198,8 +197,8 @@ section {
     color: #e8eaed;
 }
 .cai {
-    height: 24px;
-    width: 24px;
+    height: clamp(18px, 4vw, 24px);
+    width: auto;
     vertical-align: middle;
 }
 .caid {
@@ -209,7 +208,7 @@ section {
     border: 0;
     background: transparent;
     outline: none;
-    padding: 0 16px 0 8px;
+    padding: 0 16px 0 10px;
     width: 24px;
     line-height: 44px;
     margin-bottom: 2px;
@@ -219,7 +218,7 @@ section {
     align-items: center;
     padding-right: 11px;
     margin-top: -5px;
-    height: 46px;
+    height: clamp(37px, 8vw, 46px);;
     margin: auto;
     padding-left: 12px;
     color: #9aa0a6;
@@ -230,13 +229,12 @@ section {
     display: inline-block;
     fill: currentColor;
     position: relative;
-    width: 24px
+    width: 24px;
+    vertical-align: top;
 }
-.luis svg {
-    display: block;
-    height: 100%;
+.lui {
+    height: clamp(18px, 4vw, 20px);
     width: 100%;
-
 }
 
 
@@ -254,35 +252,38 @@ footer {
     background: #171717;
 }
 .foc {
-    padding: 15px 30px;
+    padding-top: clamp(2px, 1vw, 15px);
+    padding-bottom: clamp(2px, 1vw, 15px);
+    padding-right: clamp(4px, 1vw, 20px);
+    padding-left: clamp(4px, 1.2vw, 20px);
     border-bottom: 1px solid #3c4043;
-    font-size: 15px;
     color: #9aa0a6;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+.foc p {
+    padding-left: clamp(2px, 1vw, 15px);
+    font-size: clamp(7px, 1.4vw, 15px);
 }
 .foa {
     display: flex;
     justify-content: space-between;
-    padding: 0px 20px;
-    flex-wrap: wrap;
+    flex-direction: row;
+    padding-right: clamp(4px, 1vw, 20px);
+    padding-left: clamp(4px, 1.2vw, 20px);
+    flex-wrap: nowrap;
 }
 .foa a {
     display:block;
-    padding: 15px;
+    padding: clamp(2px, 1vw, 15px);
     white-space: nowrap;
     color: #9aa0a6;
     text-decoration: none;
-    font-size: 14px;
+    font-size: clamp(6.7px, 1vw, 14px);
     display: block;
 }
 .foa1, .foa2 {
     display: flex;
     flex-wrap: wrap;
-}
-@media only screen and (max-width: 1200px){
-.foa {
-    justify-content: space-evenly;
-    }
 }
